@@ -86,6 +86,11 @@ class Client
         $this->shopId = $config['shopid'];
 
         $this->nodes['item'] = new Nodes\Item\Item($this);
+        $this->nodes['logistics'] = new Nodes\Logistics\Logistics($this);
+        $this->nodes['order'] = new Nodes\Order\Order($this);
+        $this->nodes['returns'] = new Nodes\Returns\Returns($this);
+        $this->nodes['shop'] = new Nodes\Shop\Shop($this);
+
     }
 
     public function __get(string $name)
