@@ -38,6 +38,8 @@ class Client
 
     public const DEFAULT_BASE_URL = 'https://partner.shopeemobile.com/api/v1/';
 
+    public const DEFAULT_BASE_UAT_URL = 'https://partner.uat.shopeemobile.com/api/v1/';
+
     public const DEFAULT_USER_AGENT = 'shopee-php/' . self::VERSION;
 
     public const ENV_SECRET_NAME = 'SHOPEE_API_SECRET';
@@ -69,9 +71,10 @@ class Client
 
     public function __construct(array $config = [])
     {
+
         $config = array_merge([
             'httpClient' => null,
-            'baseUrl' => self::DEFAULT_BASE_URL,
+            'baseUrl' => $config['uat'] === true ? self::DEFAULT_BASE_UAT_URL : self::DEFAULT_BASE_URL,
             'userAgent' => self::DEFAULT_USER_AGENT,
             'secret' => getenv(self::ENV_SECRET_NAME),
             'partner_id' => getenv(self::ENV_PARTNER_ID_NAME),
