@@ -1,15 +1,15 @@
 {
-  "name": "minchao/shopee-php",
+  "name": "thangman22/shopee-php",
   "description": "Shopee Partner API PHP SDK",
   "type": "library",
   "keywords": [
     "shopee",
     "openapi"
   ],
-  "homepage": "https://github.com/minchao/shopee-php",
+  "homepage": "https://github.com/thangman22/shopee-php",
   "license": "BSD-3-Clause",
   "support": {
-    "issues": "https://github.com/minchao/shopee-php/issues"
+    "issues": "https://github.com/thangman22/shopee-php/issues"
   },
   "require": {
     "php": ">=7.1",
