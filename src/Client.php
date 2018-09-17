@@ -34,19 +34,19 @@ use function rtrim;
  */
 class Client
 {
-    public const VERSION = '0.0.1';
+    const VERSION = '0.0.1';
 
-    public const DEFAULT_BASE_URL = 'https://partner.shopeemobile.com/api/v1/';
+    const DEFAULT_BASE_URL = 'https://partner.shopeemobile.com/api/v1/';
 
-    public const DEFAULT_BASE_UAT_URL = 'https://partner.uat.shopeemobile.com/api/v1/';
+    const DEFAULT_BASE_UAT_URL = 'https://partner.uat.shopeemobile.com/api/v1/';
 
-    public const DEFAULT_USER_AGENT = 'shopee-php/' . self::VERSION;
+    const DEFAULT_USER_AGENT = 'shopee-php/' . self::VERSION;
 
-    public const ENV_SECRET_NAME = 'SHOPEE_API_SECRET';
+    const ENV_SECRET_NAME = 'SHOPEE_API_SECRET';
 
-    public const ENV_PARTNER_ID_NAME = 'SHOPEE_PARTNER_ID';
+    const ENV_PARTNER_ID_NAME = 'SHOPEE_PARTNER_ID';
 
-    public const ENV_SHOP_ID_NAME = 'SHOPEE_SHOP_ID';
+    const ENV_SHOP_ID_NAME = 'SHOPEE_SHOP_ID';
 
     /** @var ClientInterface */
     protected $httpClient;
