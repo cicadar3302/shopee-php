@@ -186,7 +186,7 @@ class Client
      */
     protected function signature(UriInterface $uri, string $body): string
     {
-        $path = $uri->getScheme() . $uri->getHost() . $uri->getPath();
+        $path = $uri->getScheme() .'://'. $uri->getHost() . $uri->getPath();
         $data = $path . '|' . $body;
 
         return hash_hmac('sha256', $data, $this->secret);
