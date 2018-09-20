@@ -15,7 +15,7 @@ class Item extends NodeAbstract
      */
     public function add($parameters = []): ResponseData
     {
-        return $this->post('api/v1/item/get', $parameters);
+        return $this->post('api/v1/item/add', $parameters);
     }
 
     /**
@@ -136,7 +136,7 @@ class Item extends NodeAbstract
      */
     public function updateItem($parameters = []): ResponseData
     {
-        return $this->post('api/v1/item/update', $parameters);
+        return $this->post('api/v1/item/update', $parameters);    
     }
 
     /**

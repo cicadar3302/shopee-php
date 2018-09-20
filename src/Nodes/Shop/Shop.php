@@ -1,9 +1,8 @@
 <?php
-
 namespace Shopee\Nodes\Shop;
 
 use Shopee\Nodes\NodeAbstract;
-use Shopee\RequestParametersInterface;
+//use Shopee\RequestParametersInterface;
 use Shopee\ResponseData;
 
 class Shop extends NodeAbstract
@@ -29,4 +28,14 @@ class Shop extends NodeAbstract
     {
         return $this->post('api/v1/shop/update', $parameters);
     }
+    public function getShopCategories($parameters = []): ResponseData{
+        return $this->post('api/v1/shop_categorys/get', $parameters);
+    }
+    public function addShopCategories($parameters = []): ResponseData{
+        return $this->post('api/v1/shop_category/add', $parameters);
+    }
+    public function addItemsToCategory($parameters = []):ResponseData{
+        return $this->post('api/v1/shop_category/add/items', $parameters);
+    }
 }
+    

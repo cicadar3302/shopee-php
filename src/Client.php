@@ -80,7 +80,6 @@ class Client
             'partner_id' => getenv(self::ENV_PARTNER_ID_NAME),
             'shopid' => getenv(self::ENV_SHOP_ID_NAME),
         ], $config);
-
         $this->httpClient = $config['httpClient'] ?: new HttpClient();
         $this->setBaseUrl($config['baseUrl']);
         $this->setUserAgent($config['userAgent']);
@@ -92,8 +91,7 @@ class Client
         $this->nodes['logistics'] = new Nodes\Logistics\Logistics($this);
         $this->nodes['order'] = new Nodes\Order\Order($this);
         $this->nodes['returns'] = new Nodes\Returns\Returns($this);
-        // $this->nodes['shop'] = new Nodes\Shop\Shop($this);
-
+        $this->nodes['shop'] = new Nodes\Shop\Shop($this);
     }
 
     public function __get(string $name)
